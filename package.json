@@ -1,7 +1,7 @@
 {
   "name": "social-battery-app",
   "version": "1.0.0",
-  "description": "A social battery tracking app using Node.js, jQuery Mobile, and Chart.js",
+  "description": "App for tracking and sharing high level mental health self analysis",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>Social Battery Tracker</title>
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"></link>
+    <link rel="stylesheet" href="css/styles.css"></link>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
     <script src="js/scripts.js"></script>
 </head>
 <body>
@@ -18,13 +18,79 @@
                     <li><a href="#create-graphs" data-transition="slide">Create Graphs</a></li>
                     <li><a href="#view-graphs" data-transition="slide">View Graphs</a></li>
                     <li><a href="#add-contacts" data-transition="slide">Add Contacts</a></li>
-                    <li><a href="#send-graphs" data-transition="slide">Send Graphs</a></li>
                 </ul>
             </div>
         </div>
         <div data-role="main" class="ui-content">
             <h2>Welcome to the Social Battery Tracker</h2>
-            <p>Track your social battery and wellbeing.</p>
+            <p>Track your social battery and wellbeing. Use the navigation above to get started.</p>
+        </div>
+    </div>
+
+    <div data-role="page" id="create-graphs">
+        <div data-role="header">
+            <h1>Create Current Graphs</h1>
+            <a href="#home" data-role="button" data-icon="home">Home</a>
+        </div>
+        <div data-role="main" class="ui-content">
+            <canvas id="socialBatteryChart"></canvas>
+            <form id="graphForm">
+                <label for="socialBattery">Social Battery:</label>
+                <input type="range" name="socialBattery" id="socialBattery" min="0" max="100" value="50"></input>
+                <label for="stress">Stress Level:</label>
+                <input type="range" name="stress" id="stress" min="0" max="100" value="50"></input>
+                <label for="emotionalWellbeing">Emotional Wellbeing:</label>
+                <input type="range" name="emotionalWellbeing" id="emotionalWellbeing" min="0" max="100" value="50"></input>
+                <label for="physicalWellbeing">Physical Wellbeing:</label>
+                <input type="range" name="physicalWellbeing" id="physicalWellbeing" min="0" max="100" value="50"></input>
+                <input type="submit" value="Update Graph"></input>
+            </form>
+        </div>
+    </div>
+
+    <div data-role="page" id="view-graphs">
+        <div data-role="header">
+            <h1>View Past Graphs</h1>
+            <a href="#home" data-role="button" data-icon="home">Home</a>
+        </div>
+        <div data-role="main" class="ui-content">
+            <ul id="graphsList" data-role="listview">
+                <!-- old graphs -->
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" id="add-contacts">
+        <div data-role="header">
+            <h1>Add Contacts</h1>
+            <a href="#home" data-role="button" data-icon="home">Home</a>
+        </div>
+        <div data-role="main" class="ui-content">
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name"></input>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email"></input>
+                <input type="submit" value="Add Contact"></input>
+            </form>
+            <ul id="contactsList" data-role="listview">
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" id="send-graphs">
+        <div data-role="header">
+            <h1>Send Graphs</h1>
+            <a href="#home" data-role="button" data-icon="home">Home</a>
+        </div>
+        <div data-role="main" class="ui-content">
+            <form id="sendGraphsForm">
+                <fieldset data-role="controlgroup">
+                    <legend>Select Contacts:</legend>
+                </fieldset>
+                <input type="button" value="Send as QR Code" id="sendQrCode"></input>
+            </form>
+            <canvas id="qrCodeCanvas"></canvas>
         </div>
     </div>
 </body>
