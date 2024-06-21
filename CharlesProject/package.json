@@ -1,14 +1,12 @@
 {
-  "name": "charlesproject",
-  "version": "0.0.0",
-  "private": true,
+  "name": "social-battery-app",
+  "version": "1.0.0",
+  "description": "A social battery tracking app using Node.js, jQuery Mobile, and Chart.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server.js"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "morgan": "~1.9.1"
+    "express": "^4.17.1"
   }
 }

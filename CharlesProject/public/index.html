@@ -1,13 +1,31 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Social Battery Tracker</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
 </head>
-
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
+    <div data-role="page" id="home">
+        <div data-role="header">
+            <h1>Social Battery Tracker</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#create-graphs" data-transition="slide">Create Graphs</a></li>
+                    <li><a href="#view-graphs" data-transition="slide">View Graphs</a></li>
+                    <li><a href="#add-contacts" data-transition="slide">Add Contacts</a></li>
+                    <li><a href="#send-graphs" data-transition="slide">Send Graphs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content">
+            <h2>Welcome to the Social Battery Tracker</h2>
+            <p>Track your social battery and wellbeing.</p>
+        </div>
+    </div>
 </body>
-
 </html>

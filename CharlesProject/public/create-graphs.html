@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Graphs</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <div data-role="page" id="create-graphs">
+        <div data-role="header">
+            <h1>Create Current Graphs</h1>
+            <a href="#home" data-role="button" data-icon="home">Home</a>
+        </div>
+        <div data-role="main" class="ui-content">
+            <canvas id="socialBatteryChart"></canvas>
+            <form id="graphForm">
+                <label for="socialBattery">Social Battery:</label>
+                <input type="range" name="socialBattery" id="socialBattery" min="0" max="100" value="50">
+                <label for="stress">Stress Level:</label>
+                <input type="range" name="stress" id="stress" min="0" max="100" value="50">
+                <label for="emotionalWellbeing">Emotional Wellbeing:</label>
+                <input type="range" name="emotionalWellbeing" id="emotionalWellbeing" min="0" max="100" value="50">
+                <label for="physicalWellbeing">Physical Wellbeing:</label>
+                <input type="range" name="physicalWellbeing" id="physicalWellbeing" min="0" max="100" value="50">
+                <input type="submit" value="Update Graph">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

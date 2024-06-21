@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Contacts</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <div data-role="page" id="add-contacts">
+        <div data-role="header">
+            <h1>Add Contacts</h1>
+            <a href="#home" data-role="button" data-icon="home">Home</a>
+        </div>
+        <div data-role="main" class="ui-content">
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+                <input type="submit" value="Add Contact">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
